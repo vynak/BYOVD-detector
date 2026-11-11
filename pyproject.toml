@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "byovd-detector"
+version = "0.1.0"
+description = "Find vulnerable-driver abuse (BYOVD) in Sysmon driver-load telemetry."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Vynak" }]
+keywords = ["security", "detection", "byovd", "sysmon", "windows", "dfir"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Security",
+]
+dependencies = []
+
+[project.scripts]
+byovd = "byovd.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["byovd"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

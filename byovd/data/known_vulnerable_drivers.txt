@@ -1,0 +1,27 @@
+# Known vulnerable drivers used by BYOVD attacks.
+#
+# One file name per line, lowercase. '#' starts a comment.
+#
+# This is a starting point, not a threat feed. It covers drivers that appear
+# repeatedly in public BYOVD reporting; it is not exhaustive and it will age.
+# Update it from the Microsoft vulnerable driver blocklist or LOLDrivers
+# (https://github.com/magicsword-io/LOLDrivers), or pass your own file with
+# --names.
+#
+# Matching is by file name on purpose: a name is what a loader keeps when it
+# reuses a signed driver, while hashes change with every build.
+
+dbutil_2_3.sys      # Dell firmware update utility (CVE-2021-21551)
+rtcore64.sys        # MSI Afterburner
+gdrv.sys            # Gigabyte
+asio.sys            # ASUS
+asio2.sys           # ASUS
+asio3.sys           # ASUS
+ene.sys             # ENE Technology
+winring0.sys        # OpenLibSys
+winring0x64.sys     # OpenLibSys
+iqvw64e.sys         # Intel network adapter diagnostics (CVE-2015-2291)
+speedfan.sys        # SpeedFan
+cpuz141.sys         # CPU-Z
+msio64.sys          # MSI
+gmer64.sys          # GMER

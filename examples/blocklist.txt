@@ -1,0 +1,3 @@
+# Example blocklist: one SHA-256 per line, '#' starts a comment.
+# The hash below matches the example event in sample-events.jsonl.
+4444444444444444444444444444444444444444444444444444444444444444
