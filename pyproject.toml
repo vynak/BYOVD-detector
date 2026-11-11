@@ -27,6 +27,9 @@ packages = ["byovd"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
+# Make `pytest` work from a fresh clone: without an install, the package is
+# only importable if the repository root is on sys.path.
+pythonpath = ["."]
 
 [tool.ruff]
 line-length = 100

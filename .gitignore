@@ -11,3 +11,6 @@ build/
 .DS_Store
 .pip-cache/
 pytest-of-*/
+.venv-ci/
+.uv-cache/
+uv.lock
